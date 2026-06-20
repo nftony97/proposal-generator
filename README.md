@@ -27,21 +27,6 @@ client/
 server/         ← Placeholder for imported template compatibility
 shared/         ← Placeholder for imported template compatibility
   const.ts      ← Shared constants
-```
-
-### ⚠️ Handling Images & Media
-
-**DO NOT** store images, videos, or large assets in `client/public/` or `client/src/assets/`. Local media files will cause deployment timeouts.
-
-**Required workflow:**
-1. Upload assets using the CLI: `manus-upload-file --webdev path/to/image.png`
-2. Use the returned storage path directly in your code: `<img src="/manus-storage/image_a1b2c3d4.png" />`
-3. Store the original local file in `/home/ubuntu/webdev-static-assets/` (outside the project directory)
-
-Only small configuration files like `favicon.ico`, `robots.txt`, and `manifest.json` belong in `client/public/`.
-
-Files in `client/public` are available at the root of your site—reference them with absolute paths (`/robots.txt`, etc.) from HTML templates, JSX, or meta tags.
-
 ---
 
 ## 🎯 Development Workflow
